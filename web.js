@@ -8,9 +8,9 @@ app.use(logfmt.requestLogger());
 app.get('/', function(req, res) {
   res.send('Hello World!');
   
-  var item = {'test','hello'};
+  var item = {"test","hello"};
   
-  res.send(item);
+  res.send(JSON.stringify(item));
   	
 });
 
