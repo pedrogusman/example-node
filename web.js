@@ -5,13 +5,16 @@ var app = express();
 
 app.use(logfmt.requestLogger());
 
+var id = 0;
+
 //app.use(express.logger());
 
 app.get('/getScores', function(req, res) {
   //res.send('Hello World!');
-  
+  id++;
   var item = {};
-	item.id = req.query.id;
+	//item.id = req.query.id;
+	item.id = id;
 	
   
   res.send(JSON.stringify(item));
