@@ -3,7 +3,9 @@ var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
 
-app.use(logfmt.requestLogger());
+//app.use(logfmt.requestLogger());
+
+app.use(express.logger());
 
 app.get('/getScores', function(req, res) {
   //res.send('Hello World!');
@@ -21,5 +23,8 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
-
-
+//git add web.js
+//git commit -m "init"
+//git push heroku master
+//
+ 
