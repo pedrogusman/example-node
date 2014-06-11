@@ -7,6 +7,11 @@ app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
   res.send('Hello World!');
+  
+  var item = {'test','hello'};
+  
+  res.send(item);
+  	
 });
 
 var port = Number(process.env.PORT || 5000);
