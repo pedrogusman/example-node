@@ -3,9 +3,9 @@ var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
 
-//app.use(logfmt.requestLogger());
+app.use(logfmt.requestLogger());
 
-app.use(express.logger());
+//app.use(express.logger());
 
 app.get('/getScores', function(req, res) {
   //res.send('Hello World!');
