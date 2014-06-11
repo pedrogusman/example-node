@@ -11,7 +11,7 @@ app.get('/getScores', function(req, res) {
   //res.send('Hello World!');
   
   var item = {};
-	item.id = request.query.id;
+	item.id = req.query.id;
 	
   
   res.send(JSON.stringify(item));
