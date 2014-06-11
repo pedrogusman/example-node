@@ -5,10 +5,12 @@ var app = express();
 
 app.use(logfmt.requestLogger());
 
-app.get('/', function(req, res) {
+app.get('/getScores', function(req, res) {
   //res.send('Hello World!');
   
-  var item = {"test":"hello"};
+  var item = {};
+	item.id = request.query.id;
+	
   
   res.send(JSON.stringify(item));
   	
